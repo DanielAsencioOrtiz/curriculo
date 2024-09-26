@@ -1,0 +1,2 @@
+[18-Oct-2021 10:09:41 America/Lima] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ybsuwwhd/curriculo/vendor/dompdf/dompdf/src/Renderer/Inline.php on line 147
+[18-Oct-2021 10:14:54 America/Lima] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ybsuwwhd/curriculo/vendor/dompdf/dompdf/src/Css/Style.php on line 932
