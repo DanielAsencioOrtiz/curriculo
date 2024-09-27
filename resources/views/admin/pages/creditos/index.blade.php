@@ -52,8 +52,9 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-12">
-                        <label>Contenido: </label>
-                        <textarea name="contenido" required>{{$credito->contenido}}</textarea>
+                        <label>Autoridades de la Universidad, Facultad y Escuela Profesional
+                        : </label>
+                        <textarea name="autoridades" required>{{$credito->autoridades}}</textarea>
                     </div>
                 </div>
                 <br>
@@ -67,6 +68,98 @@
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
+                <br>
+            </form>
+            
+            <form action="{{route('credito.update')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Integrantes del Comité de Currículo
+                        : </label>
+                        <textarea name="integrantes" required>{{$credito->contenido}}</textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br>
+            </form>
+
+            <form action="{{route('credito.update')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Tutores pedagógicos: </label>
+                        <textarea name="tutores" required>{{$credito->contenido}}</textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br>
+            </form>
+
+            <form action="{{route('credito.update')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Docente líder de currículo y calidad de la Facultad
+                        : </label>
+                        <textarea name="docente" required>{{$credito->contenido}}</textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br>
+            </form>
+
+            <form action="{{route('credito.update')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Equipo de apoyo académico-administrativo
+                        : </label>
+                        <textarea name="apoyo" required>{{$credito->contenido}}</textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br>
             </form>
         </div>
         <!-- /.card-body -->
@@ -114,6 +207,10 @@
 <script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <script>
     CKEDITOR.config.height  = 400;
-    CKEDITOR.replace( 'contenido' );
+    CKEDITOR.replace( 'autoridades' );
+    CKEDITOR.replace( 'integrantes' );
+    CKEDITOR.replace( 'tutores' );
+    CKEDITOR.replace( 'docente' );
+    CKEDITOR.replace( 'apoyo' );
 </script>
 @endsection
