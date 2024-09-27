@@ -66,7 +66,8 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-12">
-                        <label>3.1.3.1 Concepción del ser humano, sociedad y cultura: </label>
+                        <label>3.1.3.1 Concepción socioantropológica y cultural
+                        : </label>
                         <textarea name="concepcion_humano" required>
                             @if (is_null($base_general->concepcion_humano))
                                 <b>a) Concepción de hombre</b>
@@ -166,11 +167,318 @@
                     <div class="col-sm-3"></div>
                 </div>
             </form><br>
+            
             <form action="{{route('base_conceptuales.update3')}}" method="POST">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-12">
-                        <label>3.1.3.3 Concepción curricular: </label>
+                        <label>3.1.3.3 Concepción pedagógica: </label>
+                        <textarea name="concepcion_pedagogica" required>
+                            @if (is_null($base_general->concepcion_pedagogica))
+                            <b>a) La educación</b>
+                                <p style="text-align: justify">
+                                    La educación formal es un proceso sociocultural cuyo fin es la
+                                    formación integral del ser humano mediante la relación
+                                    dialéctica de enseñanza y aprendizaje, y el desarrollo holístico
+                                    del sujeto educable, de sus capacidades, destrezas,
+                                    facultades, sus actitudes y su sistema de valores en una
+                                    realidad situada.<br><br>
+
+                                    Es un proceso que se da a lo largo de toda la vida en tanto es
+                                    una acción práctica que tiene al aprendizaje como la
+                                    comprender y valorar las experiencias vividas en un
+                                    determinado contexto histórico social. Dicha acción práctica
+                                    es impulsada por las leyes biológicas de sobrevivencia y
+                                    adaptación al medio (necesidades); a través de ello el ser
+                                    humano pone en acción todo su potencial en búsqueda de su
+                                    plenosbienestar yautorrealización, acorde con susposibilidades
+                                    y limitaciones personales y del contexto histórico- social. <br><br>
+
+                                    Este proceso de formación y desarrollo del ser humano es un
+                                    proceso multidimensional y complejo, se da a partir de una serie de subprocesos y contradicciones tanto al interno como
+                                    externo del hombre; del desarrollo de su individualización y
+                                    socialización, e incluso de humanización y deshumanización,
+                                    este caso contrario al fin de la educación se da como
+                                    consecuencia de los efectos alienantes de los medios de
+                                    comunicación masiva y propiciadas por las actitudes acríticas
+                                    de los sujetos. <br><br>
+
+                                    Es importante destacar que existen diferencias y semejanzas
+                                    entre instrucción y educación, en tanto son procesos
+                                    interrelacionados; pero, mientras que la educación es un
+                                    proceso de formación y desarrollo integral y permanente de
+                                    los seres humanos; la instrucción privilegia el desarrollo
+                                    cognitivo, de las habilidades y destrezas con relación a saberes
+                                    y haceres precisos. <br>
+                                </p>
+
+                            <b>b) La universidad</b>
+                                <p style="text-align: justify">
+                                    La universidad es una institución educativa superior y una
+                                    comunidad académica que ha formado a las generaciones
+                                    de profesionales y hombres responsables de dinamizar el
+                                    conocimiento, la cultura y el desarrollo de los pueblos, de
+                                    transformar la sociedad, aun a pesar de sus rasgos
+                                    conservadoresque histórica y paradójicamente siempre ha
+                                    mantenido. <br><br>
+
+                                    Hoy más que nunca, la universidad está obligada cumplir un
+                                    importante rol protagónico en los procesos de generación de
+                                    conocimientos, de innovación tecnológica, de preparar a los
+                                    hombres que deben liderar los cambios en los sistemas
+                                    organizacionales y de la propia sociedad. <br>
+                                </p>
+
+                            <b>c) La pedagogía</b>
+                                <p style="text-align: justify">
+                                    La pedagogía es la ciencia social general de la educación
+                                    que tiene por objeto de estudio a los complejos fenómenos
+                                    educativos de los sujetos educables. Para ello se
+                                    interrelaciona con las otras ciencias de la educación
+                                    (psicopedagogía, neurociencia, sociología de la educación,
+                                    antropología pedagógica, etc.) así como con otras ciencias
+                                    relacionadas con los estudios del ser humano y sus procesos
+                                    de formación integral y multidimensional de los seres
+                                    humanos dentro de su interrelación con el mundo y lavida. <br><br>
+
+                                    Como toda ciencia, la pedagogía ha tenido un proceso de
+                                    largo desarrollo, dentro del cual se han destacado la existencia de diversos paradigmas, modelos y teorías que
+                                    han servido para reflexionar sobre el sentido y la praxis de la
+                                    educación, para analizar, comprender, valorar, diseñar,
+                                    implementar y ejecutar los procesos de enseñanzaaprendizaje. Dentro del MOEDUNT se recogen los aportes de
+                                    las pedagogías más importantes. <br><br>  
+
+                                    De la pedagogía tradicional se rescata la capacidad del
+                                    docente como maestro, como guía y depositario del saber
+                                    (autoridad en su materia), además de la disciplina
+                                    (responsabilidad) del estudiante,así como el privilegio de la
+                                    memoria comprensiva como base para el proceso de
+                                    información. <br><br>
+
+                                    De la pedagogía activa se recupera el carácter dinámico y
+                                    social de la educación, que incluye a la familia, institución
+                                    educativa y comunidad en la formación de un nuevo
+                                    hombre, libre, participativo, con capacidad de trabajo en
+                                    equipo, solidario, líder y autónomo. Además, plantea al
+                                    programa de estudios en bloques, en correspondencia al
+                                    contexto y de acuerdo a las necesidades estudiantiles, y el
+                                    énfasis en la evaluación cualitativae integral. <br><br>
+
+                                    De la pedagogía tecnicista se retoman los conceptos de
+                                    productividad, calidad, eficacia, eficiencia, competitividad
+                                    como pilares fundamentales de la educación, el concepto
+                                    de instrucción programada, usando herramientas
+                                    tecnológicas, módulos de auto instrucción con objetivos
+                                    claros, precisos y medibles (competencias tecnológicas). <br><br>
+
+                                    De la pedagogía humanista se considera la visión del hombre
+                                    en su complejidad, pero también en su individualidad, como
+                                    un fin y no como un medio. Se busca formar seres autónomos,
+                                    creativos, organizados, proactivos, responsables, en contra
+                                    de la desigualdad, la opresión y la injusticia. <br><br>
+
+                                    De la pedagogía libertaria se recoge el valor supremo de la
+                                    educación en y para libertad, se subraya el principio de
+                                    educar para abolir al ser humano de la más grande opresora:
+                                    la ignorancia, y que solo con la educación se libera a la
+                                    conciencia y al hombre mismo. Se pondera la relación
+                                    horizontal y respetuosa entre maestro y estudiante para que
+                                    este desarrolle su espíritu autónomo, crítico y libre. <br><br>
+
+                                    De la pedagogía constructivista se asume las tesis de que el
+                                    ser humano, tanto en lo cognitivo como en lo social y
+                                    afectivo, es una construcción y reconstrucción propia y
+                                    constante como resultadode la interacción dinámica entre
+                                    esas dimensiones; y se reconoce; además, al entorno
+                                    sociocultural como determinante del aprendizaje,
+                                    moldeador del conocimiento y el comportamiento de los
+                                    estudiantes. <br><br>
+
+                                    De la pedagogía constructivista se asume las tesis de que el
+                                    ser humano, tanto en lo cognitivo como en lo social y
+                                    afectivo, es una construcción y reconstrucción propia y
+                                    constante como resultadode la interacción dinámica entre
+                                    esas dimensiones; y se reconoce; además, al entorno
+                                    sociocultural como determinante del aprendizaje,
+                                    moldeador del conocimiento y el comportamiento de los
+                                    estudiantes. <br><br>
+
+                                    De la pedagogía histórico-critica se asume las tesis de que es
+                                    necesario transformar la realidad para lograr el bienestar del
+                                    hombre y la sociedad; el ser humano no solo necesita librarse
+                                    de la ignorancia sino también de la opresión y la pobreza. El
+                                    maestro es un guía transformador, altamente competente,
+                                    con gran calidad humana, generador de un clima
+                                    emocional para el aprendizaje. El estudiante también es un
+                                    agente de transformación, cuestionador, problematizador,
+                                    de pensamiento divergente, sujeto de su propio aprendizaje,
+                                    nadie puede liberarlosino él mismo pero integrado con su
+                                    entorno social con el cual estáen interacción. El programa
+                                    debe estar organizado con asignaturas que permitan pensar
+                                    en forma creadora y estar en relación con su propia práctica,
+                                    los contenidos van cambiando deacuerdo a los cambios de
+                                    los estudiantes. El método debe ser problematizador, activo,
+                                    cooperativo y colaborativo. La evaluación busca lo
+                                    cualitativo, debe ser dinámica, evalúa el juicio crítico,
+                                    plantea la autoevaluación, coevaluación y
+                                    heteroevaluación con el propósito de que esta sea objetiva. <br><br>
+
+                                    De la pedagogía de la complejidad de Edgar Morin se toma
+                                    la tesis de la necesidad de formar un nuevo hombre que
+                                    adquiera consciencia de su condición humana compleja,
+                                    del proceso heteróclito del conocer, de la pertinencia del
+                                    conocimiento, de su identidad terrenal, de las
+                                    incertidumbres, de la comprensión y de la ética humana; y
+                                    que esa toma de conciencia conlleve a la voluntad de
+                                    consolidar la ciudadanía planetaria.
+                                </p>    
+
+                            @else
+                                {{$base_general->concepcion_curricular}}
+                            @endif
+                        </textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </form><br>
+
+            <form action="{{route('base_conceptuales.update3')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>3.1.3.4 Enfoque por competencias: </label>
+                        <textarea name="enfoque_competencias" required>
+                            @if (is_null($base_general->enfoque_competencias))
+                            <b>a) Definición de competencia educativa</b>
+                                <p style="text-align: justify">
+                                    Es el desempeño complejo, integral e idóneo que
+                                    compromete la interacción de diversas dimensiones
+                                    humanas (motrices, cognitivas, afectivas y volitivas) para
+                                    resolver los diversos problemas del mundo de la vida y del
+                                    desempeño profesional, con autonomía, creatividad,
+                                    criticidad, civismo, efectividad, conciencia ecológica,
+                                    histórico-cultural y ética-moral. <br>
+                                </p>
+
+                            <b>b) Clasificación de las competencias</b>
+                                <p style="margin-left: 40px"><b >b.1 Competencias Genéricas</b></p>
+                                <p style="margin-left: 65px"><b >Características</b></p>
+                                    <ul style="margin-left: 70px">
+                                        <li>
+                                            Son las que cualquier estudiante debe desarrollar y
+                                            todo profesional poseer.
+                                        </li>
+
+                                        <li>
+                                            Por su complejidad, se desarrollan de modo
+                                            transversal entodos los cursos.
+                                        </li>
+
+                                        <li>
+                                            Concretan la identidad institucional.
+                                        </li>
+
+                                        <li>
+                                            Son definidas por las autoridades institucionales.
+                                        </li>
+                                    </ul>
+
+                                <p style="margin-left: 40px"><b >b.2 Competencias específicas
+                                </b></p>
+                                <p style="margin-left: 65px"><b >Características</b></p>
+                                    <ul style="margin-left: 70px">
+                                        <li>
+                                            Son comunes a todos los estudiantes que comparten
+                                            la profesión.
+                                        </li>
+
+                                        <li>
+                                            Dan base epistemológica, científica y tecnológica
+                                            a la profesión
+                                        </li>
+
+                                        <li>
+                                            Exclusivas para estudiantes de cada carrera
+                                            profesional.
+                                        </li>
+
+                                        <li>
+                                            Buscan dar lo propio de la profesión.
+                                        </li>
+
+                                        <li>
+                                            Permiten desarrollar todos los conocimientos,
+                                            destrezas, actitudes y metodologías indispensables
+                                            para el buen desempeño profesional.
+                                        </li>
+
+                                        <li>
+                                            Son definidas por el estamento docente de cada
+                                            especialidad, carrera profesional de acuerdo al nivel
+                                            de estudios de pregrado y posgrado.
+                                        </li>
+                                    </ul>
+                            @else
+                                {{$base_general->concepcion_curricular}}
+                            @endif
+                        </textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </form><br>
+
+            <form action="{{route('base_conceptuales.update3')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>3.1.3.5 Modalidad de estudios (presencialidad y manejo de la virtualidad): </label>
+                        <textarea name="modalidad_estudio" required>
+                            @if (is_null($base_general->modalidad_estudio))
+                                
+                            @else
+                                {{$base_general->concepcion_curricular}}
+                            @endif
+                        </textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </form><br>
+
+            <form action="{{route('base_conceptuales.update3')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>3.1.3.6 Concepción curricular: </label>
                         <textarea name="concepcion_curricular" required>
                             @if (is_null($base_general->concepcion_curricular))
                                 <p style="text-align: justify">El currículo es un instrumento teórico y operativo, en el cual se plasma una concepción filosófica
@@ -202,7 +510,34 @@
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
-            </form>
+            </form><br>
+
+            <form action="{{route('base_conceptuales.update3')}}" method="POST">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>3.1.3.7 Ejes curriculares transversales y propios del programa profesional: </label>
+                        <textarea name="ejes_curriculares" required>
+                            @if (is_null($base_general->ejes_curriculares))
+                               
+                            @else
+                                {{$base_general->concepcion_curricular}}
+                            @endif
+                        </textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <a href="{{route('home')}}" class="btn btn-default btn-block">ATRÁS</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block">GUARDAR CAMBIOS</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </form><br>
         </div>
         <!-- /.card-body -->
     </div>
@@ -247,6 +582,10 @@
     CKEDITOR.config.height  = 200;
     CKEDITOR.replace('concepcion_humano');
     CKEDITOR.replace('concepcion_episte');
+    CKEDITOR.replace('concepcion_pedagogica');
+    CKEDITOR.replace('enfoque_competencias');
+    CKEDITOR.replace('modalidad_estudio');
     CKEDITOR.replace('concepcion_curricular');
+    CKEDITOR.replace('ejes_curriculares');
 </script>
 @endsection
