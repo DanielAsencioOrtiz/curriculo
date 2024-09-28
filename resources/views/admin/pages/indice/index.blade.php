@@ -56,115 +56,136 @@
                             <input type="hidden" name="id_programa_estudios" value="{{$programa_estudio->id}}" required class="form-control">
                             
                             <tr>
-                                <td>PRESENTACIÓN ..............................................................................................................................................................................................</td>
+                                <td style="font-weight: bold">1. SECCIONES PRELIMINARES</td>
+                                <td><input type="number" name="n_secciones_preliminares" value="{{$indice->n_secciones_preliminares}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 30px">1.1. CRÉDITOS</td>
+                                <td><input type="number" name="n_creditos" value="{{$indice->n_creditos}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 30px">1.2. PRESENTACIÓN</td>
                                 <td><input type="number" name="n_presentacion" value="{{$indice->n_presentacion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>INTRODUCCIÓN ..............................................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">1.3. INTRODUCCIÓN</td>
                                 <td><input type="number" name="n_introduccion" value="{{$indice->n_introduccion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>BASES GENERALES .........................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_bases_generales" value="{{$indice->n_bases_generales}}" required class="form-control"></td>
+                                <td style="font-weight: bold">2. SECCIONES FUNDAMENTALES DEL CURRÍCULO</td>
+                                <td><input type="number" name="n_secciones_fundamentales" value="{{$indice->n_secciones_fundamentales}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px"> - BASES NORMATIVAS ..............................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">2.1. BASES DEL CURRÍCULO</td>
+                                <td><input type="number" name="n_bases" value="{{$indice->n_bases}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 60px">2.1.1. Bases Normativas</td>
                                 <td><input type="number" name="n_bases_normativas" value="{{$indice->n_bases_normativas}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px"> - BASES INSTITUCIONALES  ......................................................................................................................................................................</td>
-                                <td><input type="number" name="n_bases_institucionales" value="{{$indice->n_bases_institucionales}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.1.2. Bases de Identidad-Institucional</td>
+                                <td><input type="number" name="n_bases_identidad_institucional" value="{{$indice->n_bases_identidad_institucional}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px"> - BASES TEÓRICO - CONCEPTUALES ........................................................................................................................................................</td>
-                                <td><input type="number" name="n_bases_teorica" value="{{$indice->n_bases_teorica}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.1.3. Bases Teórico - Conceptuales</td>
+                                <td><input type="number" name="n_bases_teorico_conceptuales" value="{{$indice->n_bases_teorico_conceptuales}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>ESTUDIO DE LA DEMANDA SOCIAL Y EL MERCADO LABORAL ........................................................................................................................</td>
-                                <td><input type="number" name="n_estudio_demanda" value="{{$indice->n_estudio_demanda}}" required class="form-control"></td>
+                                <td style="padding-left: 30px">2.2. CONTEXTUALIZACIÓN DEL PROGRAMA PROFESIONAL</td>
+                                <td><input type="number" name="n_contextualizacion"  value="{{$indice->n_contextualizacion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>OBJETIVOS EDUCACIONALES .........................................................................................................................................................................</td>
-                                <td><input type="number" name="n_obj_educacionales" value="{{$indice->n_obj_educacionales}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.2.1. Síntesis del desarrollo histórico del Programa Profesional de la UNT</td>
+                                <td><input type="number" name="n_sintesis_desarrollo_historico" value="{{$indice->n_sintesis_desarrollo_historico}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>EJES CURRICULARES TRANSVERSALES ..........................................................................................................................................................</td>
-                                <td><input type="number" name="n_ejes_curriculares" value="{{$indice->n_ejes_curriculares}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.2.2. Determinación y justificación de la necesidad y pertinencia social y laboral del Programa Profesional en el ámbito de influencia regional, nacional e internacional</td>
+                                <td><input type="number" name="n_determinacion_justificacion" value="{{$indice->n_determinacion_justificacion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>COMPETENCIAS ...............................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_competencias"  value="{{$indice->n_competencias}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.2.3. Desarrollo prospectivo del Programa Profesional</td>
+                                <td><input type="number" name="n_desarrollo_prospectivo" value="{{$indice->n_desarrollo_prospectivo}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- GENÉRICAS  .............................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_genericas" value="{{$indice->n_genericas}}" required class="form-control"></td>
+                                <td style="padding-left: 30px">2.3. PERFILES Y OBJETIVOS DEL PROGRAMA PROFESIONAL</td>
+                                <td><input type="number" name="n_perfiles_objetivos" value="{{$indice->n_perfiles_objetivos}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- ESPECÍFICAS ...........................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_especificas" value="{{$indice->n_especificas}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.3.1. Perfil del ingresante</td>
+                                <td><input type="number" name="n_perfil_ingresante" value="{{$indice->n_perfil_ingresante}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>PERFILES ..........................................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_perfiles" value="{{$indice->n_perfiles}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.3.2. Perfil del egresado</td>
+                                <td><input type="number" name="n_perfil_egresado" value="{{$indice->n_perfil_egresado}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- DE INGRESO ............................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_perfil_ingreso" value="{{$indice->n_perfil_ingreso}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.3.3. Objetivos del Programa Profesional</td>
+                                <td><input type="number" name="n_objetivos" value="{{$indice->n_objetivos}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- DE EGRESO .............................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_perfil_egreso" value="{{$indice->n_perfil_egreso}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.3.4. Objetivos educacionales</td>
+                                <td><input type="number" name="n_objetivos_educacionales" value="{{$indice->n_objetivos_educacionales}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>MAPA CURRICULAR ..........................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_mapa_curricular" value="{{$indice->n_mapa_curricular}}" required class="form-control"></td>
+                                <td style="padding-left: 30px">2.4. MATRIZ DE ARTICULACIÓN DE COMPETENCIAS, CAPACIDADES, CURSOS Y EJES TRANSVERSALES</td>
+                                <td><input type="number" name="n_matriz_articulacion" value="{{$indice->n_matriz_articulacion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>MALLA CURRICULAR .........................................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">2.5. MALLA CURRICULAR</td>
                                 <td><input type="number" name="n_malla_curricular" value="{{$indice->n_malla_curricular}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>PLAN DE ESTUDIOS .........................................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">2.6. PLAN DE ESTUDIOS</td>
                                 <td><input type="number" name="n_plan_estudios" value="{{$indice->n_plan_estudios}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>SUMILLAS .........................................................................................................................................................................................................</td>
-                                <td><input type="number" name="n_sumilla" value="{{$indice->n_sumilla}}" required class="form-control"></td>
+                                <td style="padding-left: 30px">2.7. SUMILLAS DE LOS CURSOS</td>
+                                <td><input type="number" name="n_sumilla_cursos" value="{{$indice->n_sumilla_cursos}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>ESTRATEGIAS DE ENSEÑANZA APRENDIZAJE EN ENFOQUE POR COMPETENCIAS .....................................................................................</td>
-                                <td><input type="number" name="n_estrategias_ensenanza" value="{{$indice->n_estrategias_ensenanza}}" required class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>LINEAMIENTOS DE GESTIÓN CURRICULAR ....................................................................................................................................................</td>
-                                <td><input type="number" name="n_lineamientos" value="{{$indice->n_lineamientos}}" required class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>SISTEMA DE EVALUACIÓN ..............................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">2.8. SISTEMA DE EVALUACIÓN</td>
                                 <td><input type="number" name="n_sistema_evaluacion" value="{{$indice->n_sistema_evaluacion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- EVALUACIÓN DE LOS APRENDIZAJES ...................................................................................................................................................</td>
-                                <td><input type="number" name="n_eval_aprendizaje" value="{{$indice->n_eval_aprendizaje}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.8.1. Evaluación de los aprendizajes</td>
+                                <td><input type="number" name="n_evaluacion_aprendizajes"  value="{{$indice->n_evaluacion_aprendizajes}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- EVALUACIÓN DEL LOGRO DE COMPETENCIAS ......................................................................................................................................</td>
-                                <td><input type="number" name="n_eval_logro"  value="{{$indice->n_eval_logro}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.8.2. Evaluación del logro de competencias</td>
+                                <td><input type="number" name="n_evaluacion_logro" value="{{$indice->n_evaluacion_logro}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td style="padding-left: 30px">- EVALUACIÓN CURRICULAR .....................................................................................................................................................................</td>
-                                <td><input type="number" name="n_eval_curricular" value="{{$indice->n_eval_curricular}}" required class="form-control"></td>
+                                <td style="padding-left: 60px">2.8.3. Evaluación curricular</td>
+                                <td><input type="number" name="n_evaluacion_curricular" value="{{$indice->n_evaluacion_curricular}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>REFERENCIAS BIBLIOGRÁFICAS .....................................................................................................................................................................</td>
-                                <td><input type="number" name="n_referencias" value="{{$indice->n_referencias}}" required class="form-control"></td>
+                                <td style="padding-left: 30px">2.9. LINEAMIENTOS DE EJECUCIÓN Y GESTIÓN CURRICULAR</td>
+                                <td><input type="number" name="n_lineamiento_ejecucion_gestion" value="{{$indice->n_lineamiento_ejecucion_gestion}}" required class="form-control"></td>
                             </tr>
                             <tr>
-                                <td>ANEXOS ...........................................................................................................................................................................................................</td>
+                                <td style="padding-left: 30px">2.10. REQUISITOS DE GRADUACIÓN Y TITULACIÓN</td>
+                                <td><input type="number" name="n_requisitos_graduacion_titulacion" value="{{$indice->n_requisitos_graduacion_titulacion}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 30px">2.11. TABLA DE EQUIVALENCIAS</td>
+                                <td><input type="number" name="n_tabla_equivalencias" value="{{$indice->n_tabla_equivalencias}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 30px">2.12. REFERENCIAS BIBLIOGRÁFICAS</td>
+                                <td><input type="number" name="n_referencias_bibliograficas" value="{{$indice->n_referencias_bibliograficas}}" required class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold">3. ANEXOS</td>
                                 <td><input type="number" name="n_anexos" value="{{$indice->n_anexos}}" required class="form-control"></td>
                             </tr>
                         </tbody>
                     </table>
+
+                    <style>
+                        tr:hover {background-color: rgba(120,120,128,.12);}
+                    </style>
+
                 </div>
                 <br>
                 <div class="row">
