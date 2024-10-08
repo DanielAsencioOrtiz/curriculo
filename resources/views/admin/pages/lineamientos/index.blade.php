@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <label>Contextualizar: </label>
-                        <textarea name="contenido" required>{{$lineamiento->contenido}}</textarea>
+                        <textarea name="contenido" id="summernote" required>{{$lineamiento->contenido}}</textarea>
                     </div>
                 </div>
                 <br>
@@ -260,7 +260,6 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <script>
-    CKEDITOR.config.height  = 200;
-    CKEDITOR.replace( 'contenido' );
+
 </script>
 @endsection

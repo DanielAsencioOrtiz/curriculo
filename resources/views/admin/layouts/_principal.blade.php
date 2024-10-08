@@ -67,8 +67,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Notifications Dropdown Menu -->
          
           <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" style="    background-color: #fff;
-            border-radius: 50%;" href="#">
+            <a class="nav-link" data-toggle="dropdown" style="background-color: #fff;
+            border-radius: 50%; width: 40px; height: 40px; text-align: center" href="#">
               <i class="fa fa-power-off" style="color:#E6746C"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right" align="center">
@@ -135,6 +135,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+  <!-- Summernote -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="{{asset('admin/dist/js/adminlte.min.js')}}"></script>
 
@@ -218,6 +227,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
         var conten =  document.getElementById('osc').style.display = 'block';
           var cir_2 = document.getElementById('bla').style.display = 'none';
     }
+
+    $(document).ready(function() {
+      $('#summernote').summernote({
+        height: 300,
+        callbacks: {
+          onImageUpload: function(files) {
+            sendFile(files[0]);
+          }
+        }
+      });
+
+      function sendFile(file) {
+        let data = new FormData();
+        data.append("image", file);
+
+        $.ajax({
+          url: '/uploadImage',
+          method: 'POST',
+          data: data,
+          processData: false,
+          contentType: false,
+          success: function(url) {
+            $('#summernote').summernote('insertImage', url);
+          },
+          error: function(data) {
+            console.error("Error al subir la imagen");
+          }
+        });
+      }
+    });
   </script>
 </body>
 </html>

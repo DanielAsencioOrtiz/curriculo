@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <label>Contenido: </label>
-                        <textarea name="contenido" required>{{$graduacion->contenido}}</textarea>
+                        <textarea name="contenido" id="summernote" required>{{$graduacion->contenido}}</textarea>
                     </div>
                 </div>
                 <br>
@@ -105,7 +105,6 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <script>
-    CKEDITOR.config.height  = 400;
-    CKEDITOR.replace( 'contenido' );
+
 </script>
 @endsection

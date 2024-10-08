@@ -21,10 +21,26 @@ class TablaConvalidacionController extends Controller
     public function index(){
         $user_id = auth()->user()->id;
         $programa_estudio = ProgramaEstudios::where('id_user', $user_id)->first();
+
+        if (!$programa_estudio) {
+            return redirect('/')->with('mensaje', 'No se encontró un programa de estudios para el usuario.');
+            
+        }
+
         $plan_estudio = PlanEstudio::where('id_programa_estudios', $programa_estudio->id)->first();
+
+        if (!$plan_estudio) {
+            return redirect('/')->with('mensaje', 'No se encontró un plan de estudio para el programa.');
+        }
+
         $cursos = CursosPlanEstudios::where('id_plan_estudio', $plan_estudio->id)->get();
-        //buscamos la presentacion
+
+        if ($cursos->isEmpty()) {
+            return redirect('/')->with('mensaje', 'No se encontraron cursos para el plan de estudios.');
+        }
+
         $data = TablaConvalidaciones::where('id_programa_estudios', $programa_estudio->id)->first();
+
         if(isset($data)){
             $tabla_convalidacion = $data;
 

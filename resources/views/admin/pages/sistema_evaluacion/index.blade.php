@@ -56,8 +56,8 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-12">
-                        <label>Contextualizar: </label>
-                        <textarea name="contenido" required>{{$sistema_evaluacion->contenido}}</textarea>
+                        <label>Contextualizar:</label>
+                        <textarea name="contenido" id="summernote" required>{{$sistema_evaluacion->contenido}}</textarea>
                     </div>
                 </div>
                 <br>
@@ -212,12 +212,4 @@
 
 @section('scripts')
 
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('admin/dist/js/demo.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
-<script>
-    CKEDITOR.config.height  = 200;
-    CKEDITOR.replace( 'contenido' );
-</script>
 @endsection

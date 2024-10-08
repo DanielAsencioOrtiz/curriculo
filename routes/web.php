@@ -19,10 +19,11 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::post('/uploadImage', 'ApiController@uploadImage')->name('uploadImage');
 
 //PROGRAMAS DE ESTUDIOS
-Route::get('/programa-estudios432423423', 'ProgramaEstudiosController@index')->name('programa.estudio');
-Route::post('/programa-estudios-store42334', 'ProgramaEstudiosController@store')->name('programa.estudios.store');
+Route::get('/programa-estudios432423423', 'ProgramaEstudiosController@index')->middleware(['auth', 'role:supervisor'])->name('programa.estudio');
+Route::post('/programa-estudios-store42334', 'ProgramaEstudiosController@store')->middleware(['auth', 'role:supervisor'])->name('programa.estudios.store');
 
 //PLAN DE TRABAJO
 Route::get('/plan-trabajo', 'PlanTrabajoController@index')->name('plan.trabajo');

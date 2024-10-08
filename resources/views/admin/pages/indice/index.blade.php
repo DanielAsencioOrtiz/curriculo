@@ -240,5 +240,21 @@
 <script>
     CKEDITOR.config.height  = 400;
     CKEDITOR.replace( 'contenido' );
+
+    function validarCampos() {
+        var campos = document.querySelectorAll('input[type="number"]') // Selecciona todos los campos de número
+        for (var i = 1; i < campos.length; i++) {
+            var valorAnterior = parseInt(campos[i - 1].value)
+            var valorActual = parseInt(campos[i].value)
+
+            if (valorActual < valorAnterior) {
+                campos[i].value = valorAnterior  // Ajusta el valor si es menor
+            }
+        }
+    }
+
+    document.querySelectorAll('input[type="number"]').forEach(function(campo) {
+        campo.addEventListener('input', validarCampos)
+    })
 </script>
 @endsection

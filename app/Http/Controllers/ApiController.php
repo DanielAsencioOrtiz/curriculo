@@ -30,6 +30,7 @@ use App\Models\DetalleTablaConvalidaciones;
 use Barryvdh\DomPDF\Facade as PDF;
 use LynX39\LaraPdfMerger\Facades\PdfMerger;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller
 {
@@ -39,7 +40,18 @@ class ApiController extends Controller
         $this->middleware('auth');
     }
     
+    public function uploadImage(Request $request)
+    {
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('public/images');
+            $url = Storage::url($path);
 
+            return response()->json($url);
+        }
+
+        return response()->json(['error' => 'No se pudo subir la imagen'], 400);
+    }
 
     public function getDepartamentos(){
         $departamentos = DB::table('departamentos')->select('id', 'nombre_departamento as text')->get();

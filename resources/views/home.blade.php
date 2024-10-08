@@ -42,15 +42,17 @@
 
 @section('contenido')
 <div class="container">
-    <!--<div class="row">
-        <div class="col-sm-12">
-            <label for="Nivel de Progreso">Nivel de Progreso:</label>
-            <div class="progress">
-                <div class="progress-bar verde-pastel" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-            </div>
+
+    @if (session('mensaje'))
+        <div class="alert alert-danger alert-dismissible fade show">{{ session('mensaje') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-    </div>-->
+    @endif
+
     <div class="row mt-1">
+        
     <div class="col-sm-3">
         @if (isset($caratula))
             <div class="card h-100 @if(is_null($caratula->rcf) || is_null($caratula->rcu)) amarillo-pastel @else verde-pastel @endif" >
